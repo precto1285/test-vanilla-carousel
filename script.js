@@ -1,5 +1,4 @@
 
-
 //API CALL
 document.getElementById('getImages').addEventListener('click', getImages);
 
@@ -8,14 +7,28 @@ function getImages() {
 
   const xhr = new XMLHttpRequest();
 
-  xhr.open('GET', 'http://127.0.0.1:3000/cards?_start=1&_end=10', true);
+  xhr.open('GET', 'http://localhost:3000/cards', true);
 
   xhr.onload = function () {
-    if (this.status = 200) {
-      const response = this.responseText;
+    if (this.status === 200) {
+      const response = JSON.parse(this.responseText);
       console.log(response);
+      let output = '';
+
+      // Loop through Array data
+      response.forEach(function (card) {
+        output += `<li class="quoteCard current"><div class="card"><img src="${card.image_url}"alt="image" width="30%" height="30%"/><br/>
+       <h3><strong>${card.title}</strong></h3><br/>
+       <p>${card.text}</p><br/>
+       <h4>${card.author}</h4><br/>
+       </div></li>`
+      })
+
+      document.querySelector('.cards').innerHTML = output;
     }
   }
+
+  xhr.send();
 
 }
 

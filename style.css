@@ -48,3 +48,10 @@
 .getButton{
   text-align: center;
 }
+
+.quoteCard{
+  margin: 1em;
+  padding: 2em;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 10px #ccc;
+}
