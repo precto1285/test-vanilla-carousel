@@ -1,6 +1,4 @@
 .carouselbox{
-  /* font-size: 14px; */
-  width: 80%;
   position: relative;
   margin: 1em;
   border: 1px solid #ccc;
@@ -9,7 +7,6 @@
 }
 
 .content li{
-  font-size: 80px;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -38,11 +35,16 @@
   position: relative;
 }
 
-button {
-  border: none;
-  visibility: hidden;
-}
-
 .active button {
   visibility:visible;
+}
+
+#getImages {
+  padding: 0.5%;
+  border-radius: 35px;
+  background-color:blue;
+  color:white;
+}
+.getButton{
+  text-align: center;
 }
