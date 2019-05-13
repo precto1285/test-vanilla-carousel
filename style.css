@@ -9,14 +9,14 @@
 
 .content li{
   margin: 0;
-  padding: 0;
+  padding: 15px;
   width: 100%;
   list-style: none;
   text-align: center;
 }
 
 .active{
-  height: 200px;
+  height: 213px;
 }
 
 .active li{
@@ -41,6 +41,7 @@
 }
 
 #getImages {
+  margin-top: 5px;
   padding: 0.5%;
   border-radius: 35px;
   background-color:blue;
