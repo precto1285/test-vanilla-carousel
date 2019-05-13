@@ -17,11 +17,11 @@ function getImages() {
 
       // Loop through Array data
       response.forEach(function (card) {
-        output += `<li class="quoteCard current"><div class="card"><img src="${card.image_url}"alt="image" width="30%" height="30%"/><br/>
-       <h3><strong>${card.title}</strong></h3><br/>
-       <p>${card.text}</p><br/>
-       <h4>${card.author}</h4><br/>
-       </div></li>`
+        output += `<li class="quoteCard current"><div class="card"><img src="${card.image_url}"alt="image" width="100%" height="30%"/>
+       <div class="card-body"><h3><strong>${card.title}</strong></h3>
+       <p>${card.text}</p>
+       <h4>${card.author}</h4>
+       </div></div></li>`
       })
 
       document.querySelector('.cards').innerHTML = output;
