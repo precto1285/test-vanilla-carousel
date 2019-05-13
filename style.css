@@ -16,7 +16,7 @@
 }
 
 .active{
-  height: 213px;
+  height: 450px;
 }
 
 .active li{
@@ -54,7 +54,7 @@
 .quoteCard{
   margin: 1em;
   width:308px;
-  height: 350px;
+  height: 335px;
   padding: 0 0 2em 0;
   border: 1px solid #ccc;
   box-shadow: 2px 2px 10px #ccc;

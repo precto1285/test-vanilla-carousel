@@ -11,17 +11,17 @@ function getImages() {
 
   xhr.onload = function () {
     if (this.status === 200) {
-      const response = JSON.parse(this.responseText);
+      let response = JSON.parse(this.responseText);
       console.log(response);
       let output = '';
 
       // Loop through Array data
-      response.forEach(function (card) {
-        output += `<div class="quoteCard"><div class="card"><img src="${card.image_url}"alt="image" width="100%" height="30%"/>
+      response.map(function (card) {
+        output += `<li><div class="quoteCard"><div class="card"><img src="${card.image_url}"alt="image" width="100%" height="30%"/>
        <div class="card-body"><h3><strong>${card.title}</strong></h3>
        <p>${card.text}</p>
        <h4>${card.author}</h4>
-       </div></div></div>`
+       </div></div></div></li>`
       })
 
       document.querySelector('.cards').innerHTML = output;
